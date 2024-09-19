@@ -24,10 +24,10 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Build Docker Image
-        run: docker build -t massimofilippi/docker-ubuntu-openssh-client .
+        run: docker build -t massimofilippi/ubuntu-openssh-client .
 
       - name: Push Docker Image to Docker Hub
-        run: docker push massimofilippi/docker-ubuntu-openssh-client
+        run: docker push massimofilippi/ubuntu-openssh-client
 
 #      # Slack notifikace o úspěšném buildu
 #      - name: Notify Slack of build status
